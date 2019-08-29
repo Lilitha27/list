@@ -15,3 +15,13 @@ session_start();
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>To do list</title>
 </head>
+<body>
+        <h1>Welcome to my to do list</h1>
+        <form action="index2.php" method="post">
+            <input type="text" name="todoEntry" id="name" >
+            <button type="submit" >Add</button>
+        </form>
+  
+<script src="js/main2.js"></script>
+</body>
+</html>
