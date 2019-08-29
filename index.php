@@ -21,7 +21,35 @@ session_start();
             <input type="text" name="todoEntry" id="name" >
             <button type="submit" >Add</button>
         </form>
-  
+        <?php
+if(isset($_POST)){
+    // $item = $_SESSION["listItems"];
+    if(!(isset($_SESSION["listItems"]))){
+        $_SESSION["listItems"] = $item;
+        $_SESSION['listItems'] [] = $_POST['todoEntry'];
+        displayist();
+        // var_dump($_SESSION['listItems']);
+    }else{
+        $_SESSION["listItems"]  [] =$_POST['todoEntry'];
+        // var_dump($_SESSION['listItems']);
+       displaylist();
+    }
+}
+
+    // echo "<br>"."\n<ul>\n<li>".$_POST['todoEntry']."</li>\n</ul>";
+
+function displaylist(){
+    echo "<ul>";
+        foreach($_SESSION['listItems'] as $item){
+            echo "<li>" . $item . "</li>";
+        }
+    echo "<ul>";
+}
+
+
+    ?>
+
+
 <script src="js/main2.js"></script>
 </body>
 </html>
