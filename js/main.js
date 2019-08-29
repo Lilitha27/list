@@ -18,4 +18,9 @@ $(document).ready(function(){
             }
         });
     });
+    $("li").each(function(c){
+        if(sessionStorage.getItem(c)==1){
+            $(this).css("text-decoration", "line-through");
+        }
+     });
 });
