@@ -19,7 +19,7 @@ $(document).ready(function(){
         });
     });
     $("li").each(function(c){
-        if(sessionStorage.getItem(c)==1){
+        if(sessionStorage.getItem(c)==0){
             $(this).css("text-decoration", "line-through");
         }
      });
