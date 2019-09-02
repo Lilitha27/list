@@ -48,6 +48,26 @@
 
                     </div>
 
+                    <?php
+                        // Session Super Global
+                            if(!empty($_SESSION['todo'])){
+                                // ForEach For Loop
+                                foreach($_SESSION['todo'] as $key => $value){
+                                    // Displaying All The Items In A Div And In A Bootstrap Alert Box
+                                    echo '<div class="alert alert-light border shadow-sm pb-4">';
+                                    echo "<li>".$value['todo_item']." - ".$value['todo_dates'].
+                                    '<a class="btn btn-danger float-right" id="delete" href="index.php?to='. $key.'&action=delete">Delete</a>'."</li><br>";
+                                    echo '</div>';
+                                    
+                                }
+                              
+                            }
+                        
+                        ?>
+                        </div>
+                <div class="col-sm-2"></div>
+        </div>
+
 
 <!-- Start Scripts -->
 <!-- Script Libraries -->
